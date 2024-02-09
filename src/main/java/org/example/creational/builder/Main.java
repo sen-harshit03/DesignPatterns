@@ -40,5 +40,16 @@ public class Main {
 
         System.out.println(product4);
 
+        Url url = Url.builder()
+                .protocol("https://")
+                .hostname("localhost:")
+                .port("8080")
+                .pathParam("/api")
+                .queryParam("?abc=ahdjg")
+                .build();
+
+        System.out.println(url);
+
+
     }
 }
