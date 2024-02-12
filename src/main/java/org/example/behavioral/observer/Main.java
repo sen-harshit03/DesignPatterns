@@ -1,6 +1,7 @@
 package org.example.behavioral.observer;
 
 import org.example.behavioral.observer.publisher.GlassDoor;
+import org.example.behavioral.observer.publisher.Indeed;
 import org.example.behavioral.observer.publisher.JobPostingService;
 import org.example.behavioral.observer.subscriber.ConcreteSubscriber1;
 import org.example.behavioral.observer.subscriber.ConcreteSubscriber2;
@@ -12,23 +13,32 @@ public class Main {
 
         // 1. Create a publisher
         JobPostingService glassDoor = new GlassDoor();
+        JobPostingService indeed = new Indeed();
 
         // 2. Create subscribers
         Subscriber subscriber1 = new ConcreteSubscriber1();
         Subscriber subscriber2 = new ConcreteSubscriber2();
 
+
+        // Subscriber registering itself with job posting service
         subscriber1.attachToPublisher(glassDoor);
-        subscriber2.attachToPublisher(glassDoor);
+        subscriber1.attachToPublisher(indeed);
+        subscriber2.attachToPublisher(indeed);
 
 
-        // Send notification
-        glassDoor.SendNotificationOnUpdate();
+        // Job posting service, Sending notification
+        glassDoor.sendNotificationOnUpdate();
+        System.out.println("----------");
+        indeed.sendNotificationOnUpdate();
+        System.out.println("----------");
 
         // Unregistering subscriber 1
-        glassDoor.unRegisterForUpdate(subscriber1);
+        subscriber1.detachToPublisher(glassDoor);
+        subscriber2.detachToPublisher(indeed);
 
         // Send notification
-        glassDoor.SendNotificationOnUpdate();
+        glassDoor.sendNotificationOnUpdate();
+        indeed.sendNotificationOnUpdate();
 
 
 

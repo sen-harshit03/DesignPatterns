@@ -5,10 +5,9 @@ import org.example.behavioral.observer.subscriber.Subscriber;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GlassDoor implements JobPostingService {
+public class Indeed implements JobPostingService {
 
-    private final List<Subscriber> subscriberList = new ArrayList<>();
-
+    List<Subscriber> subscriberList = new ArrayList<>();
     @Override
     public void registerForUpdate(Subscriber subscriber) {
         subscriberList.add(subscriber);
@@ -21,7 +20,7 @@ public class GlassDoor implements JobPostingService {
 
     @Override
     public void sendNotificationOnUpdate() {
-        String message = "Hey, new job has been posted on Glassdoor. Please apply";
+        String message = "Hey, new job has been posted on Indeed. Please apply";
         subscriberList.forEach(subscriber -> subscriber.update(message));
     }
 }

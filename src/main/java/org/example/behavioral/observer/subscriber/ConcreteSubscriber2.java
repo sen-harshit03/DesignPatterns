@@ -4,9 +4,6 @@ import org.example.behavioral.observer.publisher.JobPostingService;
 
 public class ConcreteSubscriber2 implements Subscriber {
 
-    //    @Autowired
-    private JobPostingService jobPostingService;
-
     public void attachToPublisher(JobPostingService jobPostingService) {
         jobPostingService.registerForUpdate(this);
     }

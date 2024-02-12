@@ -6,5 +6,5 @@ public interface JobPostingService {
 
     void registerForUpdate(Subscriber subscriber);
     void unRegisterForUpdate(Subscriber subscriber);
-    void SendNotificationOnUpdate();
+    void sendNotificationOnUpdate();
 }
