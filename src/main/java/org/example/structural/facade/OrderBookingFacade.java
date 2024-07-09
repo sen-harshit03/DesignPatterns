@@ -15,7 +15,7 @@ public class OrderBookingFacade {
 //        this.notificationService = notificationService;
 //        this.invoicingService = invoicingService;
 //    }
-    public OrderBookingFacade() {
+    public OrderBookingFacade() {  // For now we are using new here, but irl we will use DI
         this.inventoryService = new InventoryService();
         this.orderService = new OrderService();
         this.invoicingService =  new InvoicingService();

@@ -4,7 +4,7 @@ import org.example.creational.factoryMethod.example1.products.Bike;
 import org.example.creational.factoryMethod.example1.products.Car;
 import org.example.creational.factoryMethod.example1.products.Vehicle;
 
-public class VehicleFactoryImpl implements VehicleFactory{
+public class VehicleFactoryImpl implements VehicleFactory {
     @Override
     public Vehicle createVehicle(int wheels) {
         if(wheels == 2) {

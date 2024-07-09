@@ -27,6 +27,21 @@ import org.example.structural.decorator.example1.toppings.Pepperoni;
  *  2. Instantiation of each and every decorators each time is the pain in the ass.
  *  3. If we have to follow some ordering while decorating it can be most flexible design.
  *
+ * When I inherit behavior by subclassing, that behavior is set statically
+ * at compile time. In addition, all subclasses must inherit the same behavior. If
+ * however, I can extend an object’s behavior through composition, then I can do
+ * this dynamically at runtime
+ *
+ * Decorator is decoration and delegation.
+ *
+ * Cheese -> Onion -> Corn -> VegPizza
+ *
+ * Each decorator will delegate the responsibility to get cost to its decorators.
+ *
+ *  TotalCost = Cost(Cheese) + Cost(onion, corn, veg pizza)
+ *  cost = currCost + func(next decorator)
+ *
+ *
  */
 public class Main {
 

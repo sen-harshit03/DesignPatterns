@@ -6,6 +6,7 @@ import org.example.creational.factoryMethod.example1.products.Vehicle;
 
 public class VehicleStore {
 
+    private VehicleFactory vehicleFactory;
 
     public Vehicle getVehicle(int wheels) {
 /**
@@ -18,7 +19,7 @@ public class VehicleStore {
 //            vehicle = new Bike();
 //        } else if(wheels == 4) {
 //            vehicle = new Car();
-//        }
+//        } else if (wheel == 10) {
 
         VehicleFactory factory = new VehicleFactoryImpl();
         Vehicle vehicle = factory.createVehicle(wheels);

@@ -4,7 +4,7 @@ package org.example.creational.factoryMethod.example1;
  *      Factory patterns encapsulate the objection creation code.
  *      (separating the logic of object creation from the business logic)
  *
- *      Def -: The Factory Method Pattern "defines" an interface
+ *      Def -: The Factory Method Pattern "defines" an interface(contract)
  *             for creating an object, but lets subclasses decide which class to instantiate.
  *
  *     They say “decide” not because the pattern
