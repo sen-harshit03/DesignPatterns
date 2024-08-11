@@ -1,7 +1,7 @@
 package org.example.creational.singleton;
 
 public class MultithreadedSingleton {
-    private static MultithreadedSingleton instance;
+    private volatile static MultithreadedSingleton instance;
 
     private MultithreadedSingleton() {}
 
