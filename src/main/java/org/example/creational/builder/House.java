@@ -1,11 +1,7 @@
 package org.example.creational.builder;
 
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.Objects;
 
 @Getter @Setter
 public class House {
@@ -23,7 +19,11 @@ public class House {
 
     public static class Builder {
 
-        private House house = new House();
+        private House house;
+
+        public Builder() {
+            house = new House();
+        }
 
         public Builder rooms(int rooms) {
             house.rooms = rooms;
