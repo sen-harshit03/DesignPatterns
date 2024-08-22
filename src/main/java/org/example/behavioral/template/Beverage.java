@@ -1,5 +1,9 @@
 package org.example.behavioral.template;
 
+/**
+ * Template method pattern defines the algorithm with steps.
+ *  and allow subclasses to provide implementation for one or more steps.
+ */
 public abstract class Beverage {
     void prepareRecipe() {
         boilWater();
